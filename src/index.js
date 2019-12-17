@@ -2,6 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      lat: null,
+    };
+  }
 
   render() {
     window.navigator.geolocation.getCurrentPosition(
@@ -15,5 +22,5 @@ class App extends React.Component {
 
 ReactDOM.render(
   <App />,
-  document.getElementById('root')
-)
+  document.querySelector('#root')
+);
